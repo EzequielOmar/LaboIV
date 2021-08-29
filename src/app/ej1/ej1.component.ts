@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ej1',
@@ -34,5 +34,12 @@ export class Ej1Component implements OnInit {
     }
     this.promedio = (parseInt(this.e1) + parseInt(this.e2)) / 2;
     this.suma = parseInt(this.e1) + parseInt(this.e2);
+  }
+
+  limpiar() {
+    this.e1 = 'Ingrese primer edad';
+    this.e2 = 'Ingrese segunda edad';
+    this.promedio = 0;
+    this.suma = 0;
   }
 }

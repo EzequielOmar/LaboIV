@@ -1,0 +1,24 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 [ngClass]="{'active': SignInActive,'inactive underlineHover': !SignInActive}"
+      (click)=handlerSignInSignUp()> Sign In </h2>
+    <h2  [ngClass]="{'active': !SignInActive,'inactive underlineHover': SignInActive}"
+    (click)=handlerSignInSignUp()>Sign Up </h2>
+    <!-- Icon -->
+    <div class="fadeIn first">
+    </div>
+    <!-- Login Form -->
+    <form>
+      <input type="text" #mail class="fadeIn second" name="login" placeholder="tuEmail@gmail.com">
+      <input type="text" #pass class="fadeIn third" name="login" placeholder="clave">
+      <input type="submit" class="fadeIn fourth" value="Log In" (click)=Log(mail.value,pass.value)>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
